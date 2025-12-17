@@ -96,7 +96,7 @@ SYNCHRONOUS UPCOUNTER
 
 **TRUTH TABLE**
 
-![Uploading image.png…]()
+<img width="687" height="697" alt="image" src="https://github.com/user-attachments/assets/6675c607-9355-4672-9c8e-9179fcbd3e31" />
 
 
 
