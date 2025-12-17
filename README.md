@@ -28,19 +28,81 @@ However, the remaining flip-flops should be made ready to toggle only when all l
 
 **Procedure**
 
-/* write all the steps invloved */
+1.Type the program in Quartus software.
+
+2.Compile and run the program.
+
+3.Generate the RTL schematic and save the logic diagram.
+
+4.Create nodes for inputs and outputs to generate the timing diagram.
+
+5.For different input combinations generate the timing diagram.
 
 **PROGRAM**
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. 
+1.SYNCHRONOUS UPCOUNTER PROGRAM.
 
-Developed by: RegisterNumber:
-*/
+```
+module UPCOUNTER(out,clk,rst);
+input clk,rst;
+output reg [3:0]out;
+always @ (posedge clk)
+begin
+if(rst)
+       out<=0;
+
+else 
+    out <= out+1;    
+end
+endmodule
+```
+
+2.SYNCHRONOUS DOWNCOUNTER PROGRAM.
+
+```
+module ex12(out,clk,rst);
+ input clk,rst; 
+ output reg [3:0]out; 
+always @ (posedge clk)
+begin
+if(rst)
+    out<=0; 
+else 
+     out <= out-1;
+end
+endmodule
+```
+
+
+
+
+Developed byDHAMODHARAN S: RegisterNumber:25009463
+
 
 **RTL LOGIC UP COUNTER**
 
+SYNCHRONOUS UPCOUNTER
+
+<img width="1593" height="760" alt="image" src="https://github.com/user-attachments/assets/7c727be6-61f7-4048-9eb1-7d95af1d13de" />
+
+
+
 **TIMING DIAGRAM FOR IP COUNTER**
+
+SYNCHRONOUS UPCOUNTER
+
+<img width="1600" height="847" alt="image" src="https://github.com/user-attachments/assets/e2b8f3eb-6e3d-4e58-a3d3-c296b0e78424" />
+
 
 **TRUTH TABLE**
 
+![Uploading image.png…]()
+
+
+
+
+
+
 **RESULTS**
+
+Implement 4 bit synchronous up counter and validate functionality is created successfully.
