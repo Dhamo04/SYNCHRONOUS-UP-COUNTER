@@ -40,37 +40,19 @@ However, the remaining flip-flops should be made ready to toggle only when all l
 
 **PROGRAM**
 
-1.SYNCHRONOUS UPCOUNTER PROGRAM.
-
 ```
-module UPCOUNTER(out,clk,rst);
-input clk,rst;
-output reg [3:0]out;
+module ex11 (out,clk,rstn); 
+input clk,rstn;
+output reg [3:0] out;
 always @ (posedge clk)
-begin
-if(rst)
-       out<=0;
-
-else 
-    out <= out+1;    
-end
+begin 
+	if(!rstn) 
+		out<=0; 
+	else 
+		out <= out+1; 
+end 
 endmodule
-```
 
-2.SYNCHRONOUS DOWNCOUNTER PROGRAM.
-
-```
-module ex12(out,clk,rst);
- input clk,rst; 
- output reg [3:0]out; 
-always @ (posedge clk)
-begin
-if(rst)
-    out<=0; 
-else 
-     out <= out-1;
-end
-endmodule
 ```
 
 
